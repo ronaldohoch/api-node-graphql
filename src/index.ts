@@ -1,9 +1,10 @@
 import * as http from 'http';
 import app from './app';
+import { normalizePort,onError,onListening } from './utils/utils';
 
 const server = http.createServer(app);
+const port = normalizePort(process.env.port||3100);
 
-server.listen(3100);
-server.on('listening',()=>{
-    console.log("Escutando");
-});
+server.listen(port);
+server.on('error',onError(server));
+server.on('listening',onListening(server));
