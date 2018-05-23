@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --delay 5 dist/index",
+    "dev": "set NODE_ENV=development && nodemon --delay 5 dist/index",
     "gulp": "node_modules/.bin/gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,12 +22,17 @@
   "devDependencies": {
     "@types/express": "^4.11.1",
     "@types/node": "^10.1.2",
+    "@types/express-graphql": "^0.6.1",
+    "@types/graphql": "^0.13.1",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.4.0",
     "gulp-typescript": "^4.0.2",
     "typescript": "^2.8.3"
   },
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
+    "graphql-tools": "^3.0.2"
   }
 }
